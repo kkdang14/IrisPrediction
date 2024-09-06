@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Marketing Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--    <link rel="stylesheet" href="./css/style.css">-->
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #e8b88b;
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-container__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-container__form-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-container__form-item label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-container__form-item input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e8b88b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #7b5e43;;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <h1>
+            Iris Prediction
+        </h1>
+        <div class="form-container">
+            <form action="/predict" method="post">
+                <div class="form-container__form">
+                    <div class="form-container__form-item">
+                        <label for="sepal-length">Sepal Length:</label>
+                        <input type="text" id="sepal-length" name="sepal-length">
+                    </div>
+                    <div class="form-container__form-item">
+                        <label for="sepal-width">Sepal Width:</label>
+                        <input type="text" id="sepal-width" name="sepal-width">
+                    </div>
+                    <div class="form-container__form-item">
+                        <label for="petal-length">Petal Length:</label>
+                        <input type="text" id="petal-length" name="petal-length">
+                    </div>
+                    <div class="form-container__form-item">
+                        <label for="petal-width">Petal Width:</label>
+                        <input type="text" id="petal-width" name="petal-width">
+                    </div>
+                </div>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
