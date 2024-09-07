@@ -3,9 +3,9 @@ from flask import Flask, render_template, request
 import pandas as pd
 import pickle
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='frontend')
 
-with open('model/model_trained_2.pkl', 'rb') as file:
+with open('model/model_trained.pkl', 'rb') as file:
     model = pickle.load(file)
 
 @app.route('/')
